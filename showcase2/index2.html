@@ -1,0 +1,224 @@
+
+<meta http-equiv="refresh" codntent="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+<style>
+
+	body {
+		margin: 0;
+		font-size: 1em;
+		color:white;
+	}
+	
+	.kiri .atas{
+		background-color:teal;
+	}
+	
+	.menu{
+		text-align:center;
+		padding:10px;
+		cursor:pointer;
+	}
+	.bawah{
+		margin:20px;
+	}
+	
+	.bawah2{
+	}
+
+	.kiri {
+		background-color: #9E9E9E;
+		overflow-y:scroll;
+	}
+	
+	.kiri .link{
+		padding:10px;
+		cursor:pointer;
+		border-bottom: 1px solid black;
+		transition:all .5s;
+	}
+
+	.kanan {
+		background-color: white;
+		flex: 4;
+	}
+
+	.utama {
+		display: flex;
+		height:100%;
+	}
+
+	.item {
+		border: 4px solid #FF5722;
+		margin-bottom: 20px;
+		box-shadow: black 9px 7px 4px 0px;
+	}
+	
+	.item:hover{
+		border-color:cyan;
+	}
+
+	.judul {
+		background-color: burlywood;
+		padding: 10px;
+		font-size: 1.3em;
+	}
+
+	.isi {
+		background-color: blue;
+	}
+
+	iframe {
+		width: 100%;
+		height: 100%;
+		border: none;
+	}
+
+	.item .isi>div:hover {
+		background-color: black;
+		color: yellow;
+	}
+	
+	a:link, a:visited,a:active{
+		color:black;
+	}
+	
+	a{
+		text-decoration:none;
+	}
+	a:hover{
+		color:white;
+	}
+	
+	@media only screen and (orientation: landscape) {
+		.menu{
+			display:none;
+		}
+		.kiri {flex: 1;}
+
+	}
+
+	@media only screen and (orientation: portrait) {
+		.utama{
+			flex-direction: column;
+		}
+		.kanan{
+			height:40px;
+		}
+		.bawah2{
+			display:none;
+		}
+	}
+
+	.tengah{
+		transform:translate(-50%,-50%);
+		left:50%;
+		top:50%;
+		position:relative;
+	}
+</style>
+
+<div class=utama>
+
+	<div class=kiri>
+		<div class="atas menu">
+			menu
+		</div>
+		<div class="bawah">
+			<div class="item">
+				<div class="judul">made with javascript</div>
+				<div class="isi">
+					<div class=link onclick=halaman("javascript/tictactoe.html")>tic tac toe</div>
+					<div class=link onclick=halaman("javascript/mengingat.html")>mengingat</div>
+				</div>
+			</div>
+
+			<div class="item">
+				<div class="judul">made with godot</div>
+				<div class="isi">
+					<div class=link onclick=halaman("godot/tictactoe/tictactoe.html")>tic tac toe</div>
+					<div class=link onclick=halaman("godot/mengingat/mengingat.html")>mengingat</div>
+					<div class=link onclick=halaman("godot/multiuser/multiuser.webm")>multiuser (preview)</div>
+					<div class=link onclick=halaman("godot/multiuser/multiuser.zip")>multiuser (download exe)</div>
+				</div>
+			</div>
+
+			<div class="item">
+				<div class="judul">made with unity</div>
+				<div class="isi">
+					<div class=link onclick=halaman("unity/tictactoe/index.html")>tic tac toe</div>
+					<div class=link onclick=halaman("unity/mengingat/index.html")>mengingat</div>
+				</div>
+			</div>
+
+			<div class="item">
+				<div class="judul">made with vb6</div>
+				<div class="isi">
+					<div class=link onclick=halaman("vb6/tictactoe/tictactoe.webm")>tic tac toe (preview)</div>
+					<div class=link onclick=halaman("vb6/mengingat/mengingat.webm")>mengingat (preview)</div>
+					<div class=link onclick=halaman("vb6/tictactoe/tictactoe.zip")>tic tac toe (download exe)</div>
+					<div class=link onclick=halaman("vb6/mengingat/mengingat.zip")>mengingat (download exe)</div>
+				</div>
+			</div>
+
+			<div class="item">
+				<div class="judul">browse manually</div>
+				<div class="isi">
+					<div class=link><a href="https://vx2f.xyz/x/showcase/">of this folder</a></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	
+	<div class=kanan>
+		<iframe></iframe>
+	</div>
+	
+</div>
+
+<script>
+let iframe=document.getElementsByTagName("iframe")[0];
+let menu=document.getElementsByClassName("menu")[0];
+let bawah=document.getElementsByClassName("bawah")[0];
+
+menu.onclick=()=>{
+	toggle();
+}
+function toggle(){
+	bawah.classList.toggle("bawah2");
+}
+
+function halaman(kata){
+	iframe.src=kata + "?x="+ Date.now();
+	toggle();
+}
+
+
+//iframe.src="javascript/tictactoe.html";
+
+function isportrait(){
+	return window.innerHeight > window.innerWidth;
+}
+
+
+
+iframe.contentWindow.document.open();
+let kata;
+if (isportrait()){
+	kata='pilih menu yang ada diatas';
+}else{
+	kata='pilih menu yang ada disamping';
+}
+
+kata="<div style='text-align:center;font-size:55px;position:relative;top:50%;left:50%;transform:translate(-50%,-50%);'>" + kata  + "</div>";
+iframe.contentWindow.document.write(kata);
+iframe.contentWindow.document.close();
+
+if(isportrait()){
+	toggle();
+}
+</script>
