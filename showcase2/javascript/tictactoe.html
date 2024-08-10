@@ -1,0 +1,365 @@
+
+<!--
+last update : 2 april 2024
+-->
+
+
+<head>
+
+<meta http-equiv="refresh" contewnt="1">
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+body {
+    font-size: 8vw;
+    color: white;
+    background-color: #9E9E9E;
+	animation-name:anim;
+	animation-duration:3s;
+}
+
+.pointer{
+	cursor:pointer;
+}
+/*end var*/
+
+
+.menu{
+	width: 88%;
+	height: 28%;
+	display: flex;
+	flex-direction: column;}
+
+.tombol{
+	margin: 19px;
+	flex: 1;
+	border: 10px solid #FFEB3B;
+	background-image: linear-gradient(#00ffe7, #a91993);
+	transition:all .5s;
+}
+
+.tombol:hover{
+	background-color:black;
+	background-image:unset;
+}
+
+@keyframes anim {
+	  0% {transform: scale(0,0);}
+	  100% {transform: scale(1,1);}
+}
+
+
+.kotak {
+    width: 86%;
+    aspect-ratio: 1/1;
+    background-color: green;
+    padding: 28px;
+    display: flex;
+}
+
+.baris {
+    background-color: orange;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.item {
+    background-color: #764c0d;
+    margin: 11px;
+    flex: 1;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.info,.restart {
+    background-color: darkblue;
+    margin: 18px;
+    flex: 1;
+}
+
+.tengah-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tengah-transform {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.bawah {
+    display: flex;
+    flex-direction: column;
+    background-color: #598076;
+}
+
+.atas {
+    flex-grow: 4;
+}
+
+.restart {}
+
+.restart {
+    border: 7px solid #FFEB3B;
+    border-radius: 24px;
+}
+
+
+@media only screen and (orientation: landscape) {
+	.game{
+		flex-direction: row-reverse;
+	}
+	.kotak{
+		height: 90%;
+		width: unset;
+	}
+	.bawah{
+		flex-grow:3;
+	}
+	.info,.restart{
+	flex: unset;
+	height: 11%;
+	margin: 10px;
+	}
+	
+	body{
+		font-size: 3vw;
+	}
+	.menu{
+	height: 75%;
+	width: 37%;
+	}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- menu -->
+<div class="menu tengah-transform">
+	<div class="cmdstart tombol tengah-flex pointer">mulai</div>
+	<div class="cmdcaramain tombol tengah-flex pointer">cara main</div>
+	<div class="cmdinfo tombol tengah-flex pointer">info</div>
+</div>
+
+<!-- game -->
+<div class=game>
+	<div class=atas>
+		<div class="kotak tengah-transform">
+			<div class=baris>
+				<div class="item pointer"></div>
+				<div class="item pointer"></div>
+				<div class="item pointer"></div>
+			</div>
+			<div class=baris>
+				<div class="item pointer"></div>
+				<div class="item pointer"></div>
+				<div class="item pointer"></div>
+			</div>
+			<div class=baris>
+				<div class="item pointer"></div>
+				<div class="item pointer"></div>
+				<div class="item pointer"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class=bawah>
+		<div class="info tengah-flex">info</div>
+		<div class="restart tengah-flex pointer">restart</div>
+	</div>
+
+</div>
+
+</body>
+
+<script>
+
+
+function acak37(){
+	acak55=true;
+	isacak47over=false;
+	acak47.style.display="";
+	acak48.style.display=String.fromCharCode(110,111,110,101);
+	acak53.style.display="";
+	acak54.style.display=String.fromCharCode(110,111,110,101);
+	acak53.innerHTML=String.fromCharCode(103,105,108,105,114,97,110,32,65);
+
+	for (let i = 0; i < 9; i++) {
+		acak52[i].innerHTML=acak57;
+		acak52[i].style.backgroundColor=String.fromCharCode(35,55,54,52,99,48,100);
+		acak52[i].onclick=()=>{
+			acak38(i);
+		}
+	}
+}
+
+
+function acak38(acak45){
+
+	if(isacak47over) {return};
+	
+	if(acak52[acak45].innerHTML!=acak57){
+		alert(String.fromCharCode(107,108,105,107,32,97,114,101,97,32,121,97,110,103,32,107,111,115,111,110,103,32,33,33,33))
+		return
+	}
+	if(acak55){
+		acak52[acak45].innerHTML=String.fromCharCode(65)
+	}else{
+		acak52[acak45].innerHTML=String.fromCharCode(66)
+	}
+
+	if(acak40()){
+		//console.log(String.fromCharCode(120,120))
+		isacak47over=true
+		acak54.style.display="";
+		return
+	}
+	acak39();
+
+	acak55=!acak55;
+}
+
+function acak39(){
+	if(acak55){
+		acak43(String.fromCharCode(103,105,108,105,114,97,110,32,66));
+	}else{
+		acak43(String.fromCharCode(103,105,108,105,114,97,110,32,65));
+	}
+}
+function acak40(){
+	if(acak42()){
+		if (acak55){
+			acak43(String.fromCharCode(65,32,109,101,110,97,110,103,32,33,33));
+		}else{
+			acak43(String.fromCharCode(66,32,109,101,110,97,110,103,32,33,33));
+		}
+
+		return true
+	}
+	
+	if (acak41()){
+		acak43(String.fromCharCode(72,65,83,73,76,32,83,69,82,73,32,33,33,33));
+		return true;
+	}
+	return false;
+}
+
+function acak41(){
+	let i;
+
+	for(i=0;i<9;i++){
+		//console.log(i);
+		if(acak52[i].innerHTML==acak57){
+			return false;
+		}
+	}
+	return true;
+}
+function acak42(){
+	if(acak44(0,1,2)){return true;}
+	if(acak44(3,4,5)){return true;}
+	if(acak44(6,7,8)){return true;}
+	if(acak44(0,3,6)){return true;}
+	if(acak44(1,4,7)){return true;}
+	if(acak44(2,5,8)){return true;}
+	if(acak44(0,4,8)){return true;}
+	if(acak44(2,4,6)){return true;}
+	
+	return false;
+}
+
+function acak43(acak46){
+	acak53.innerHTML=acak46;
+}
+function acak44(x,y,z){
+	let a,b,c;
+	a=acak52[x].innerHTML;
+	b=acak52[y].innerHTML;
+	c=acak52[z].innerHTML;
+	
+	if(a==b && a==c){
+		if(a!=acak57){
+			acak52[x].style.backgroundColor=String.fromCharCode(99,121,97,110);
+			acak52[y].style.backgroundColor=String.fromCharCode(99,121,97,110);
+			acak52[z].style.backgroundColor=String.fromCharCode(99,121,97,110);
+			return true;
+		}
+	}
+	return false;
+	
+}
+
+
+let acak47=document.getElementsByClassName(String.fromCharCode(103,97,109,101))[0];
+let acak48=document.getElementsByClassName(String.fromCharCode(109,101,110,117))[0];
+
+
+let acak49=document.getElementsByClassName(String.fromCharCode(99,109,100,99,97,114,97,109,97,105,110))[0];
+let acak50=document.getElementsByClassName(String.fromCharCode(99,109,100,105,110,102,111))[0];
+let acak51=document.getElementsByClassName(String.fromCharCode(99,109,100,115,116,97,114,116))[0];
+
+let acak52=document.getElementsByClassName(String.fromCharCode(105,116,101,109));
+let acak53=document.getElementsByClassName(String.fromCharCode(105,110,102,111))[0];
+let acak54=document.getElementsByClassName(String.fromCharCode(114,101,115,116,97,114,116))[0];
+
+
+let acak55;
+let isacak47over;
+let acak57="";
+
+acak49.onclick=()=>{
+	let acak46
+	acak46 = String.fromCharCode(99,97,114,97,32,98,101,114,109,97,105,110,92,110,92,110)
+	acak46 = acak46 + String.fromCharCode(45,32,115,101,112,101,114,116,105,32,112,97,100,97,32,117,109,117,109,110,121,97,92,110)
+	acak46 = acak46 + String.fromCharCode(45,32,98,117,97,116,32,115,97,116,117,32,103,97,114,105,115,32,104,117,114,117,102,32,65,32,97,116,97,117,32,66,92,110)
+	acak46 = acak46 + String.fromCharCode(32,32,98,97,105,107,32,115,101,99,97,114,97,32,109,101,110,100,97,116,97,114,44,32,109,101,110,117,114,117,110,92,110)
+	acak46 = acak46 + String.fromCharCode(32,32,97,116,97,117,32,100,105,97,103,111,110,97,108,92,110)
+	acak46 = acak46 + String.fromCharCode(45,32,103,105,108,105,114,97,110,32,112,108,97,121,101,114,32,121,97,110,103,32,98,101,114,109,97,105,110,44,32,115,101,115,117,97,105,32,100,101,110,103,97,110,32,112,101,116,117,110,106,117,107,92,110)
+	acak46 = acak46 + String.fromCharCode(45,32,121,97,110,103,32,109,101,110,121,101,108,101,115,97,105,107,97,110,32,108,101,98,105,104,32,100,97,104,117,108,117,44,32,100,105,97,32,121,97,110,103,32,109,101,110,97,110,103,92,110)
+	acak46 = acak46 + String.fromCharCode(92,110)
+	acak46 = acak46 + String.fromCharCode(92,110)
+	alert(acak46)
+};
+
+acak50.onclick=()=>{
+	let acak46=String.fromCharCode(116,105,99,32,116,97,99,32,116,111,101,92,110,92,110,109,97,100,101,32,119,105,116,104,32,106,97,118,97,115,99,114,105,112,116,92,110,98,121,32,58,32,97,110,97,110,103)
+	alert(acak46)
+};
+
+acak51.onclick=()=>{
+	acak37();
+
+};
+
+acak54.onclick=()=>{
+	acak37();
+
+};
+
+
+acak47.style.display=String.fromCharCode(110,111,110,101);
+//acak48.style.display=String.fromCharCode(110,111,110,101);
+
+
+</script>

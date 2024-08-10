@@ -1,0 +1,396 @@
+<html>
+	<head>
+	
+	<style>
+	
+		*{
+			margin:0;
+			box-sizing:border-box;
+		}
+
+		.pointer{
+			cursor:pointer;
+		}
+
+		body{
+			font-size: 7vw;
+			color: white;
+			background-color: #a0b4bd;
+		}
+
+		.tengah-transform {
+			top: 50%;
+			left: 50%;
+			position: relative;
+			transform: translate(-50%, -50%);
+		}
+
+		.tengah-flex{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.center-text{
+			text-align:center;
+		}
+
+		.menu {
+			width: 78%;
+		}
+
+		.tombol {
+			background-image: linear-gradient(45deg, #00BCD4, #f16d3d);
+			margin: 11px;
+			border: 11px solid #630a72;
+		}
+
+		.kotak {
+			background-color: #3d9941;
+			display: flex;
+			width: 88%;
+			aspect-ratio: 1/1;
+			flex-direction: column;
+		}
+
+		.row2a {
+			background-color: #3F51B5;
+			display: flex;
+		}
+
+		.row2b {
+			background-color: #E91E63;
+			margin: 11px;
+			border-radius: 24px;
+			border: 13px solid #795548;
+		}
+
+		.utama {
+			display: flex;
+			height: 100%;
+			flex-direction:column;
+		}
+
+		.row1 {
+			flex: 8;
+		}
+
+		.kanan {
+			flex: 1;
+		}
+
+		.kiri {
+			flex: 3;
+		}
+
+		.kiri,.kanan {
+			background-color: black;
+			margin: 6px;
+		}
+
+		.row2 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.row2a, .row2b {
+			flex: 1;
+		}
+
+		.item {
+			margin: 11px;
+			flex: 1;
+			background-color: #6f4d40;
+		}
+
+		.baris {
+			flex: 1;
+			display: flex;
+		}
+		/* responsive */
+
+		@media all and (orientation: landscape) {
+			.menu{
+				width:47%;
+			}
+			.utama{
+				flex-direction: row-reverse;
+			}
+			.kotak{
+			height: 88%;
+			width: unset;
+			}
+			.row2{
+			flex: 5;
+			font-size: 4vw;
+			justify-content: center;
+			}
+			.row2a,.row2b{
+			flex: 0;
+			}
+			.row2a{
+			flex-direction: column-reverse;
+			}
+		}
+
+
+	</style>
+
+	</head>
+	
+	<body>
+		<div class="menu tengah-transform center">
+			<div class="tombol cmdstart tengah-flex pointer">start</div>
+			<div class="tombol cmdcaramain tengah-flex pointer">cara main</div>
+			<div class="tombol cmdinfo tengah-flex pointer">info</div>
+		</div>
+		
+		<div class="utama center">
+			<div class="row1">
+				<div class="kotak tengah-transform">
+					<div class="baris">
+						<div class="item tengah-flex">1</div>
+						<div class="item tengah-flex">2</div>
+						<div class="item tengah-flex">3</div>
+						<div class="item tengah-flex">4</div>
+					</div>
+					<div class="baris">
+						<div class="item tengah-flex">5</div>
+						<div class="item tengah-flex">6</div>
+						<div class="item tengah-flex">7</div>
+						<div class="item tengah-flex">8</div>
+					</div>
+					<div class="baris">
+						<div class="item tengah-flex">9</div>
+						<div class="item tengah-flex">10</div>
+						<div class="item tengah-flex">11</div>
+						<div class="item tengah-flex">12</div>
+					</div>
+					<div class="baris">
+						<div class="item tengah-flex">13</div>
+						<div class="item tengah-flex">14</div>
+						<div class="item tengah-flex">15</div>
+						<div class="item tengah-flex">16</div>
+					</div>
+				</div>
+			</div>
+			<div class="row2">
+				<div class="row2a">
+					<div class="kiri center-text">info</div>
+					<div class="kanan center-text">timer</div>
+				</div>
+				<div class="row2b tengah-flex cmdrestart pointer">
+					restart
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+<script>
+	
+	function acak27(){
+		function acak28(){
+			const points = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+			const hurufs=[String.fromCharCode(97),String.fromCharCode(97),"b","b","c","c","d","d","e","e","f","f","g","g","h","h"]
+			points.sort(function(a, b){return 0.5 - Math.random()});
+
+			for (let i=0;i<16;i++){
+				acak53[i].data=hurufs[points[i]];
+				acak53[i].innerHTML=marker;
+				acak53[i].onclick=()=>{
+					acak29(i);
+				}
+			}
+		}
+
+		acak28();
+	}
+	
+	function acak29(acak38){
+		if(acak55) return;
+		if(acak58) return;
+		if(acak53[acak38].innerHTML!=marker) return;
+		
+		if(acak54){
+			acak56=acak38;
+		}else{
+			acak57=acak38;
+			if(acak56==acak57) return;
+		}
+		acak53[acak38].innerHTML=acak53[acak38].data;
+		
+		if(!acak54){
+		
+			if(acak53[acak56].data==acak53[acak57].data){
+				acak53[acak56].style.backgroundColor=String.fromCharCode(98,108,117,101);
+				acak53[acak57].style.backgroundColor=String.fromCharCode(98,108,117,101);
+			}else{
+				acak32(String.fromCharCode(115,97,108,97,104));
+			}
+		}
+		
+		acak54=!acak54
+		
+		if(acak30()){
+			acak31(true);
+		}
+
+	}
+	
+	function acak30(){
+		for (let i=0;i<16;i++){
+			if(acak53[i].innerHTML==marker){
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	function acak31(acak39){
+		acak55=true;
+		if(acak39){
+			acak32(String.fromCharCode(97,110,100,97,32,109,101,110,97,110,103),true);
+		}else{
+			acak32(String.fromCharCode(97,110,100,97,32,107,97,108,97,104),true);
+		}
+		t.stop();
+	}
+
+	function acak32(pesan,isforever){
+
+		function acak33(){
+			acak48.innerHTML=pesan;
+			acak58=true;
+		}
+		function acak34(){
+			acak53[acak56].innerHTML=marker;
+			acak53[acak57].innerHTML=marker;
+			acak58=false;
+		}
+		acak33();
+		
+		let acak41=true;
+		let acak43=0;
+		let acak44=setInterval(()=>{
+			if(!isforever){
+				acak43++;
+				if(acak43>=11){
+					clearInterval(acak44)
+					acak34();
+				}
+			}
+			
+			if(acak41){
+				acak48.style.visibility=String.fromCharCode(104,105,100,100,101,110);
+			}else{
+				acak48.style.visibility=String.fromCharCode(118,105,115,105,98,108,101);
+			}
+			acak41=!acak41;
+		},55);
+	}
+	
+	class Timer{
+
+		max=60;
+		elapsed=0;
+
+		onprocess(){
+			acak49.innerHTML=this.elapsed;
+		}
+		
+		acak34(){
+			acak31(false);
+		}
+
+		start(){
+			this.elapsed=this.max;
+			this.waktu=setInterval(
+				()=>{
+					this.onprocess();
+					this.elapsed--;
+					if(this.elapsed<0){
+						this.acak34();
+					}
+				}
+				,1000);
+
+		}
+		
+		stop(){
+			clearInterval(this.waktu);
+		}
+
+		
+	}
+	
+	function acak35(acak40){
+		console.log(acak40);
+	}
+	function acak36(){
+		acak35(String.fromCharCode(99,111,98,97));
+	}
+	
+	function acak37(acak41){
+		if(acak41){
+			//acak51.style.display=String.fromCharCode(110,111,110,101);
+			acak52.style.display=String.fromCharCode(110,111,110,101);
+		}else{
+			acak51.style.display=String.fromCharCode(110,111,110,101);
+			acak52.style.display=String.fromCharCode(102,108,101,120);
+		}
+	}
+
+	let acak45=document.querySelector(String.fromCharCode(46,99,109,100,115,116,97,114,116));
+	let acak46=document.querySelector(String.fromCharCode(46,99,109,100,99,97,114,97,109,97,105,110));
+	let acak47=document.querySelector(String.fromCharCode(46,99,109,100,105,110,102,111));
+	
+	let acak48=document.querySelector(String.fromCharCode(46,117,116,97,109,97,32,46,107,105,114,105));
+	let acak49=document.querySelector(String.fromCharCode(46,117,116,97,109,97,32,46,107,97,110,97,110));
+	let acak50=document.querySelector(String.fromCharCode(46,99,109,100,114,101,115,116,97,114,116));
+	
+	let acak51=document.querySelector(String.fromCharCode(46,109,101,110,117));
+	let acak52=document.querySelector(String.fromCharCode(46,117,116,97,109,97));
+
+	let acak53=document.querySelectorAll(String.fromCharCode(46,117,116,97,109,97,32,46,105,116,101,109));
+	
+	let acak54=true;
+	let acak55=false;
+	let acak56;
+	let acak57;
+	const marker="";
+	let acak58=false;
+	
+	acak45.onclick=()=>{
+		acak37(false);
+		t.start();
+
+	};
+	
+	acak50.onclick=()=>{
+		location.reload();
+	}
+	acak46.onclick=()=>{
+		let acak40
+		acak40 = String.fromCharCode(45,32,112,105,108,105,104,32,50,32,107,111,116,97,107,32,115,101,99,97,114,97,32,97,99,97,107,44,32,100,97,110,32,112,97,115,116,105,107,97,110,32,105,115,105,110,121,97,32,115,97,109,97,44,32,106,105,107,97,32,98,101,100,97,44,32,117,108,97,110,103,105,32,108,97,103,105,92,110) 
+		acak40 = acak40 + String.fromCharCode(45,32,106,105,107,97,32,116,101,114,105,115,105,32,115,101,109,117,97,44,32,100,105,110,121,97,116,97,107,97,110,32,109,101,110,97,110,103,92,110)
+		acak40 = acak40 + String.fromCharCode(45,32,106,105,107,97,32,119,97,107,116,117,32,104,97,98,105,115,44,32,107,97,108,97,104,92,110)
+
+		alert(acak40)
+	};
+
+	acak47.onclick=()=>{
+		let acak40 = String.fromCharCode(103,97,109,101,32,109,101,110,103,105,110,103,97,116,32,106,97,118,97,115,99,114,105,112,116,44,32,32,98,121,32,97,110,97,110,103)
+		alert(acak40)
+	};
+
+	//===end variable
+	
+	acak27();
+	const t=new Timer();
+	acak37(true);
+
+
+</script>
+
