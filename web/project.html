@@ -1,0 +1,622 @@
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+
+<style>
+	:root {
+		--color-main: hsl(120deg 100% 25%);
+		--color-header: hsl(120deg 36% 26%);
+		--color-header-text: hsl(120deg 36% 74%);
+		--color-navigasi: hsl(120deg 31.87% 54.5%);
+		--color-navigasi-text: hsl(0deg 0% 90%);
+		--color: hsl(120deg 0% 95%);
+		--color-text: hsl(120deg 0% 28%);
+		
+	}
+
+	*{
+		box-sizing:border-box;
+	}
+
+	html{
+		font-family:Verdana,sans-serif;
+		color:var(--color-text);
+	}
+
+	body{
+		margin:0;
+	}
+
+	a{
+		color:var(--color-main);
+	}
+	.center-text{
+		text-align:center
+	}
+
+</style>
+
+
+<style>
+
+	.utama {
+		display: flex;
+		flex-direction: column;
+		min-height:100%;
+	}
+
+	.header {
+		background-color: var(--color-header);
+		color:var(--color-header-text);
+	}
+	
+	
+	@keyframes anim{
+		from {
+			transform: scale(1);
+		}
+		to {
+			transform: scale(0.9);
+		}
+	}
+	.header .judul{
+			animation : anim 1s infinite alternate linear;
+	}
+	.navigasi{
+		text-align:center;
+		background-color:var(--color-navigasi);
+		font-size:0;
+	}
+
+	.navigasi a {
+		color:var(--color-navigasi-text);
+		padding: 12px 12px;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 15px;
+		transition: all 0.5s;
+		text-transform: uppercase;
+	}
+
+	.navigasi a:hover{
+		color:white;
+		background-color:hsl(120deg 11.11% 45%);
+		font-style:italic;
+	}
+
+	.isi {
+		background-color: var(--color);
+		overflow-y: auto;
+		padding: 22px;
+		margin: auto;
+		flex: 80%;
+	}
+	
+	.isi h2{
+		color: hsl(120deg 23.46% 45%);
+	}
+
+	.footer {
+		background-color: var(--color-header);
+		color:var(--color-header-text);
+		padding: 22px;
+	}
+
+
+@media all and (min-width: 1000px) {
+	.isi{
+			width: 1000px;
+
+	}
+}
+</style>
+
+<div class=utama>
+
+	<div class="header center-text">
+		<div class=judul>
+			<h1>vx2f</h1>
+		</div>
+	</div>
+	
+	<div class=navigasi>
+		<a href="utama.html">home</a>
+		<a href="about.html">about</a>
+		<a href="showcase.html">showcase</a>
+		<a href="project.html">project</a>
+	</div>
+
+	<div class=isi>
+
+		<h2>project</h2>
+
+<h4>project yang pernah di bikin, ketika di tempat kerja (mediapro)</h4>
+
+
+
+
+<style>
+	.projek{
+		display:flex;
+		flex-wrap:wrap;
+		justify-content: space-evenly;
+	}
+	
+	.projek .kotak{
+		margin:30px;
+	}
+	
+	
+	.projek .kotak2{
+		width:200px;
+		transition:all 0.5s;
+		border-radius:10px;
+		box-shadow:20px 20px 20px 0px #00000069;
+	}
+
+	.projek .kotak2:hover{
+		transform:scale(1.1);
+	}
+	
+	.projek .judul{
+		background-color: #9fc2e7;
+		text-align:center;
+		padding:5px;
+		border-top-left-radius:inherit;
+		border-top-right-radius:inherit;
+
+	}
+	
+	.projek .isix{
+		background-color: #f7bb61;
+		padding:10px;
+		border-bottom-left-radius:inherit;
+		border-bottom-right-radius:inherit;
+		font-size: 0.8rem;
+	}
+</style>
+
+
+
+<div class=projek>
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>pertamina, berlian</div>
+				<div>(unity, spout, tuio)</div>
+				<div>(202310)</div>
+			</div>
+			<div class=isix>game yang tampil di floor dan wall, butuh 2 user, injak tombol play masing masing, game berjalan, berlian berjatuhan dari atas layar, poin bertambah jika menginjak berlian yang ditentukan, akan berkurang jika menginjak selain itu, maxsimal time 30 detik, jika ada yg mencapat highscore 100 detik, game selesai, tampil pemenang (selama sekian detik), game kembali keawal</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>pertamina fotobooth</div>
+				<div>(unity,webserver,kamera logitech)</div>
+				<div>(202310)</div>
+			</div>
+			<div class=isix>aplikasi fotobooth, user input nama dan nomor telepon, foto aktif, ada video alpha nunggu 3 detik,kemudian pengunjung foto,hasil berupa qrcode, yang mengarah web,hasil dari upload foto tadi</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>summarecon underwater</div>
+				<div>(unity,tuio)</div>
+				<div>(202309)</div>
+			</div>
+			<div class=isix>app seperti kura2 underwater,ikan2 bergerak secara acak di layar, ketika diinjak, semua yang kena, akan bergerak cepat selama sekian detik</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>aplikasi qdenga touch led tuio</div>
+				<div>(unity)</div>
+				<div>(202309)</div>
+			</div>
+			<div class=isix>pertemuan ilmiah tahunan yang diadakan idai, ikatan dokter anak indonesia, aplikasi qdenga, konten berada ditengah, menu disamping kanan, terdiri dari 12 tombol, scrolling infinite, tombol atas maupun bawah, dengan simple animasi tween, 10 tombol berisikan kontent video, 1 tombol berisi image, 1 tombol, berisi peta indonesia, terdapat bbrapa pinpoin,tiap poin diklik, muncul popup (simple animasi tween) daftar dokter yang terkait, tiap kali menu button diclose, konten utama tampil video idle</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>summarecon semut, touch led tuio</div>
+				<div>(unity)</div>
+				<div>(202310)</div>
+			</div>
+			<div class=isix>aplikasi floor touch, ada 3 layer, background, hewan, grass,berisi beberapa hewan, kadal,laba laba, jika diklik, lari sekian detik, selain itu juga terdapat kumpulan semut, ditengah2 arena, jika diinjak, akan menyebar ke penjuru arah, kemudian kembali lagi ketengah, jika tidak ada injakan</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>demian fotobooth, background remover tanpa fisikal greenscreen</div>
+				<div>(unity, zed cam)</div>
+				<div>(202310)</div>
+			</div>
+			<div class=isix>aplikasi touchscreen fotobooth, terdiri dari 4 halaman, 1 registrasi isi nama dan handphone,2 halaman foto, remove background,3 halaman preview (retake dan next button), ketika di next, hasil diupload keserver, 4 hasil berupa kode qr, yg bisa discan hp, otomatis kedownload ke hp jika discan</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>bsi umroh travel fair (aplikasi scan qr)</div>
+				<div>(javascript)</div>
+				<div>(202308)</div>
+			</div>
+			<div class=isix>user diharuskan membuka aplikasi (html) lewat hp masing2,kemudian mencari kodeqr disekitar lokasi sebanyak 10 dari total 25,jika sudah menyelesaikan tugas, akan muncul notif,selamat anda bisa memainkan game selanjutnya (hp dilihatkan ke panitia)</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>aplikasi photobooth</div>
+				<div>(unity)</div>
+				<div>(202308)</div>
+			</div>
+			<div class=isix>aplikasi fotobooth touchscreen, memakai zed cam,dan remove background (tanpa greenscreen fisik),user isi nama dan email,ambil foto, background bisa diganti,hasil foto diupload di website (berbasis php)(berupa qrcode untuk discan)</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>hyundai floor wall</div>
+				<div>(unity)</div>
+				<div>(202308)</div>
+			</div>
+			<div class=isix>aplikasi klien server .exe,klien = aplikasi yg diproyeksikan di floor, ada 1 partikel yg mengikuti,ada 5 video, ke play bergantian, mendeteksi injak kaki (tuio), jika menginjak titik tertentu, maka video di floor akan play,dan seolah2 tersambung dengan app wall (dibantu dengan resolume),server = app wall, jika dinding disentuh, akan muncul partikel (seperti fluid),terdiri dari 2 layer (video), video belakang akan terlihat di masking partikel (ketika dinding disentuh)</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>indosat doorprize</div>
+				<div>(unity)</div>
+				<div>(202308)</div>
+			</div>
+			<div class=isix>fungsi mengacak data (berupa nama dan email), untuk keperluan doorprize,pemenang terpilih, tidak akan tampil lagi di acak berikutnya</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>photobooth mitsubishi</div>
+				<div>(unity)</div>
+				<div>(202308)</div>
+			</div>
+			<div class=isix>app fotobooth,user input nama dan email, kemudian foto diarea foto,background mobil dibagi 2 bagian, sehingga seolah2, jika 2 orang foto,yg dikiri berada di belakang mobil, dan yang kanan berada di depan mobil,foto dikirim ke email,menggunakan greenscreen fisik</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>vitu/alfamart fotobooth</div>
+				<div>(unity)</div>
+				<div>(202308)</div>
+			</div>
+			<div class=isix>versi kinek, dan versi zed,app fotobooth, remove background (tanpa kain green screen),user bisa ganti background, dan juga baju (3d model),touchless, dioperasikan dengan gerakan tangan,deteksi klik lewat genggam atau tahan 1 detik,hasil foto diupload ke web, berupa qrcode</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>angkasa</div>
+				<div>(unity)</div>
+				<div>(before 202308)</div>
+			</div>
+			<div class=isix>app wall, background video tentang ruang angkasa, ada beberapa planet, dan meteor serta astronot,  bergerak acak dilayar,ketika dinding disentuh/digeser, keluar partikel bintang2, ketika menyentuh planet, planet akan hancur mengecil,3 detik, kemudian muncul lagi</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>blackpink</div>
+				<div>(unity)</div>
+				<div>(before 202308)</div>
+			</div>
+			<div class=isix>background video, latar belakang pink bunga sakura gugur,dinding ketika disentuh dengan tangan, keluar particle love pink,ada karakter, boneka logo indomilk, menari2 santai, ketika disentuh, akan menari dengan tarian tertentu</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>hyundai, tmii photobooth</div>
+				<div>(unity)</div>
+				<div>(before 202308)</div>
+			</div>
+			<div class=isix>terdapat beberapa pilihan gambar berdasarkan kategori,vehicle, beautifull indonesia, hyundai future mobility, happy family,menggunakan kamera kinek, dan juga fisikal green screen, gambar foto dikirim via email</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>mineapolis</div>
+				<div>(unity)</div>
+				<div>(before 202308)</div>
+			</div>
+			<div class=isix>bertemakan bawah laut,terdapat tumbuhan2 laut, bergoyang ke kanan dan kekiri, digerakkan pakai shader,anak2 menggambar pada kertas gambar, yg ada qrcodenya,template berupa ikan hiu, ikan biasa, ubur ubur,kemudian gambar discan pakai scanner, trus dimunculkan ke dalam layar /dinding</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>toyota musium angkut</div>
+				<div>(godot)</div>
+				<div>(before 202308)</div>
+			</div>
+			<div class=isix>layar tampil disebuah meja, navigasi digerakkan menggunakan leapmotion</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>toyota musium angkut</div>
+				<div>(godot)</div>
+				<div>(before 202308)</div>
+			</div>
+			<div class=isix>simulasi mobil, terdiri dari 3 layar, kemudian ada stir fisik (merk thrustmaster),bertemakan mengemudi ecodriving,</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>polri musrenbang photobooth</div>
+				<div>(unity)</div>
+				<div>(before 202308)</div>
+			</div>
+			<div class=isix>pengunjung bisa foto bersama kapolri (berupa video alpha channel webm),hasil diupload ke website</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>kelinci</div>
+				<div>(unity)</div>
+				<div>(before 202308)</div>
+			</div>
+			<div class=isix>permainan memukul kelinci, kelinci muncul dari beberapa lubang,ketika berhasil dipukul, layar bergetar, dan muncul partikel bintang di kepala kelinci</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>indosat peresmian</div>
+				<div>(unity)</div>
+				<div>(before 202308)</div>
+			</div>
+			<div class=isix>4 tab, ditanda tangani memakai jari tangan, semua tanda tangan muncul di leyar besar/utama</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>telkom pohon</div>
+				<div>(unity)</div>
+				<div>(before 202308)</div>
+			</div>
+			<div class=isix>aplikasi scan gambar, template berupa beberapa pohon,digambar manual, scan, kemudian muncul acak di layar,bertemakan alam/pepohonan, background langit terdiri 4 warna, bergantian secara blending</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>tulisan</div>
+				<div>(unity)</div>
+				<div>(before 202308)</div>
+			</div>
+			<div class=isix>tulisan  marque memenuhi layar,dan tulisan berwarna gradasi dari atas ke bawah</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>tweet</div>
+				<div>(godot)</div>
+				<div>(before 202308)</div>
+			</div>
+			<div class=isix>aplikasi klien server, klien = tablet, pc =server</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>vuse</div>
+				<div>(godot)</div>
+				<div>(before 202308)</div>
+			</div>
+			<div class=isix>app door prize, akan mengacak nama, tombol start stop, reroll ,confirm</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>hiera bsd city</div>
+				<div>(vb6)</div>
+				<div>(before 202308)</div>
+			</div>
+			<div class=isix>app doorprize, mengacak data nama dan perusahaan</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>honda brv</div>
+				<div>(unity)</div>
+				<div>(before 202308)</div>
+			</div>
+			<div class=isix>app doorprize, pada umumnya</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>summarecon doorprize</div>
+				<div>(vb6)</div>
+				<div>(before 202308)</div>
+			</div>
+			<div class=isix>app doorprize, pada umumnya</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>kura2 underwater</div>
+				<div>(unity)</div>
+				<div>(before 202308)</div>
+			</div>
+			<div class=isix>app seperti app angkasa, ikan,kura2 bergerak acak di arna layar,ketika disentuh, hewan akan maju bergerak cepat selama beberapa detik</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>smm jogja</div>
+				<div>(unity)</div>
+				<div>(before 202308)</div>
+			</div>
+			<div class=isix>terdapat beberapa frame di layar, jika frame di sentuh, akan muncul dan play video</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>ubs gold</div>
+				<div>(unity)</div>
+				<div>(before 202308)</div>
+			</div>
+			<div class=isix>menu2 berisi halaman informasi emas,hitung kadar emas,  navigas menu dikendalikan oleh leap motion sensor</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>kopi gajah tubruk, prj</div>
+				<div>(unity)</div>
+				<div>(before 202308)</div>
+			</div>
+			<div class=isix>sensor depth, kamera zed, setiap orang yang terdeteksi (maks 15 orang), kepala akan digantikan dengan 3d model gajah</div>
+		</div>
+	</div>
+
+
+
+	<div class=kotak>
+		<div class=kotak2>
+			<div class=judul>
+				<div>daihatsu logo hunt</div>
+				<div>(javascript)</div>
+				<div>(before 202308)</div>
+			</div>
+			<div class=isix>terdapat beberapa qrcode, jika discan dengan kamera, akan muncul logo daihatsu, ketika diklik, akan bertambah point, jika mencapai max poin, dianggap menang</div>
+		</div>
+	</div>
+
+
+
+
+
+</div>	</div>
+
+	<div class="footer center-text">
+		all right reserved
+	</div>
+</div>

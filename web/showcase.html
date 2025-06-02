@@ -1,0 +1,213 @@
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+
+<style>
+	:root {
+		--color-main: hsl(120deg 100% 25%);
+		--color-header: hsl(120deg 36% 26%);
+		--color-header-text: hsl(120deg 36% 74%);
+		--color-navigasi: hsl(120deg 31.87% 54.5%);
+		--color-navigasi-text: hsl(0deg 0% 90%);
+		--color: hsl(120deg 0% 95%);
+		--color-text: hsl(120deg 0% 28%);
+		
+	}
+
+	*{
+		box-sizing:border-box;
+	}
+
+	html{
+		font-family:Verdana,sans-serif;
+		color:var(--color-text);
+	}
+
+	body{
+		margin:0;
+	}
+
+	a{
+		color:var(--color-main);
+	}
+	.center-text{
+		text-align:center
+	}
+
+</style>
+
+
+<style>
+
+	.utama {
+		display: flex;
+		flex-direction: column;
+		min-height:100%;
+	}
+
+	.header {
+		background-color: var(--color-header);
+		color:var(--color-header-text);
+	}
+	
+	
+	@keyframes anim{
+		from {
+			transform: scale(1);
+		}
+		to {
+			transform: scale(0.9);
+		}
+	}
+	.header .judul{
+			animation : anim 1s infinite alternate linear;
+	}
+	.navigasi{
+		text-align:center;
+		background-color:var(--color-navigasi);
+		font-size:0;
+	}
+
+	.navigasi a {
+		color:var(--color-navigasi-text);
+		padding: 12px 12px;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 15px;
+		transition: all 0.5s;
+		text-transform: uppercase;
+	}
+
+	.navigasi a:hover{
+		color:white;
+		background-color:hsl(120deg 11.11% 45%);
+		font-style:italic;
+	}
+
+	.isi {
+		background-color: var(--color);
+		overflow-y: auto;
+		padding: 22px;
+		margin: auto;
+		flex: 80%;
+	}
+	
+	.isi h2{
+		color: hsl(120deg 23.46% 45%);
+	}
+
+	.footer {
+		background-color: var(--color-header);
+		color:var(--color-header-text);
+		padding: 22px;
+	}
+
+
+@media all and (min-width: 1000px) {
+	.isi{
+			width: 1000px;
+
+	}
+}
+</style>
+
+<div class=utama>
+
+	<div class="header center-text">
+		<div class=judul>
+			<h1>vx2f</h1>
+		</div>
+	</div>
+	
+	<div class=navigasi>
+		<a href="utama.html">home</a>
+		<a href="about.html">about</a>
+		<a href="showcase.html">showcase</a>
+		<a href="project.html">project</a>
+	</div>
+
+	<div class=isi>
+
+		   		    <style>
+        .sc-kotak{
+			border: 4px solid #FF5722;
+			border-radius: 0px;
+			text-align: center;
+			margin-bottom: 34px;
+			box-shadow: black 9px 7px 4px 0px;
+			color: white;
+			}
+		.sc-kotak:hover{
+			border-color: cyan;
+		}
+        .sc-judul{
+			background-color: burlywood;
+			border-bottom: inherit;
+			padding: 10px;
+			}
+        .sc-isi{
+			background-color: blue;
+			}
+		.sc-isi div:hover{
+			background-color: #000000;
+			color: yellow;
+			transition: .5s;
+		}
+		.sc-isi div {
+			padding: 10px;
+		}
+		a {
+			color: white;
+			text-decoration: none;
+			cursor: pointer;
+		}
+</style>
+
+
+    <h2>showcase</h2>
+    <p>beberapa contoh showcase dari beberapa bahasa pemrograman</p>
+    <p>tiap link akan membuka jendela baru</p>
+	
+	
+ <div style="max-width: 333px; margin: auto;">
+
+	<div class="sc-kotak">
+      <div class="sc-judul">java script</div>
+      <div class="sc-isi">
+        <a target=blank href=assets/showcase/javascript/tictactoe.html><div>tic tac toe</div></a>
+        <a target=blank href=assets/showcase/javascript/mengingat.html><div>mengingat</div></a>
+      </div>
+	</div>
+		
+	<div class="sc-kotak">
+      <div class="sc-judul">godot</div>
+      <div class="sc-isi">
+        <a target=blank href=assets/showcase/godot/godot_tictactoe_VP8.webm><div>tic tac toe</div></a>
+        <a target=blank href=assets/showcase/godot/godot_mengingat_VP8.webm><div>mengingat</div></a>
+      </div>
+	</div>
+	
+	<div class="sc-kotak">
+      <div class="sc-judul">unity</div>
+      <div class="sc-isi">
+        <a target=blank href=assets/showcase/unity/unity_tictactoe_VP8.webm><div>tic tac toe</div></a>
+        <a target=blank href=assets/showcase/unity/unity_mengingat_VP8.webm><div>mengingat</div></a>
+      </div>
+	</div>
+	
+	<div class="sc-kotak">
+      <div class="sc-judul">vb6</div>
+      <div class="sc-isi">
+        <a target=blank href=assets/showcase/vb6/vb6_tictactoe_VP8.webm><div>tic tac toe</div></a>
+        <a target=blank href=assets/showcase/vb6/vb6_mengingat_VP8.webm><div>mengingat</div></a>
+      </div>
+	</div>
+</div>
+	</div>
+
+	<div class="footer center-text">
+		all right reserved
+	</div>
+</div>
