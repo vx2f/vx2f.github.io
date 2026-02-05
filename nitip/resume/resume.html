@@ -1,1 +1,275 @@
+<!-- 
+ referensi 
+ https://themewagon.github.io/resume-2/#
+ -->
+
+<head></head>
+<link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+<style>
+body {
+    font-family: 'Saira Extra Condensed',serif;
+    background-color: #bd5d38!important;
+    color: #626b74;
+    max-width: 777px;
+    margin: auto;
+    margin-top: 22px;
+    font-size: 1.4em;
+}
+  .kotak {
+    background-color: orange;
+    background-color: white;
+    padding: 23px;
+    margin-bottom: 33px;
+    border-radius: 11px;
+
+& .judul {
+    background-color: green;
+    background-color: transparent;
+    font-size: 2.5em;
+    padding: 22px 0;
+    text-transform: uppercase;
+    color: #343a40;
+}
+    & .isi {
+      background-color: teal;
+      background-color: transparent;
+    }
+  }
+
+  .kolom {
+    column-count: 3;
+    & .persenbox {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      & .persen {
+        background-color: rgb(119, 207, 245);
+        background-color: transparent;
+
+        & .atas {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        & .bar {
+          /* background-color: blue; */
+          border: 4px solid blue;
+          height: 11px;
+          & .bar2 {
+            height: 100%;
+            background-color: #5ed38f;
+          }
+        }
+      }
+    }
+  }
+
+
+  .panel {
+    margin: 11px 0;
+    overflow: auto;
+    width: 444px;
+  }
+img {
+    float: left;
+    width: 150px;
+    border: 2px solid red;
+    padding: 12px;
+    margin-right: 22px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+
+td:nth-child(1){
+    width: 158px;
+}
+td:nth-child(2){
+    width: 22px;
+}
+
+table{
+    font-size: 100%;
+}
+
+a{
+    color: blue;
+}
+</style>
+
+<div class="kotak">
+  <div class="judul">about me</div>
+  <div class="panel">
+    <img src="https://vx2f.github.io/web/assets/images/aku.jpg" />
+    saya sangat suka programming, dan suka mempelajari sesuatu yang berhubungan
+    dengan programming. below is my resume.
+  </div>
+</div>
+
+<div class="kotak">
+  <div class="judul">info</div>
+  <div class="isi">
+
+
+    <table>
+        <tr>
+            <td>nama</td>
+            <td>:</td>
+            <td>anang</td>
+        </tr>
+        <tr>
+            <td>fullname</td>
+            <td>:</td>
+            <td>muhammad anang mujiburrohman</td>
+        </tr>
+        <tr>
+            <td>ttl</td>
+            <td>:</td>
+            <td>semarang, 30 april 1985</td>
+        </tr>
+        <tr>
+            <td>agama</td>
+            <td>:</td>
+            <td>islam</td>
+        </tr>
+    </table>
+
+</div>
+</div>
+
+<div class="kotak">
+  <div class="judul">skill</div>
+  <div class="isi">
+    <div class="kolom">
+      <div class="persenbox">
+
+
+        <script>
+
+          const arrlabel = ["unity", "godot", "c#","vb6","javascript","html","css","query sql","php","touchdesigner","flutter","arduino"];
+          const arrnilai=[89,89,89,89,89,84,84,83,77,66,44,22];
+          const arrclass=[]
+
+for (let i = 0; i < arrlabel.length; i++) {
+  v1=`       <div class="persen">
+          <div class="atas">
+            <div class="label">${arrlabel[i]}</div>
+            <div class="jumlah">${arrnilai[i]} %</div>
+          </div>
+          <div class="bar">
+            <div class="bar2" style="width:${arrnilai[i]}%"></div>
+          </div>
+        </div>
+`;
+  document.write(v1);
+}
+        </script>
+
+        <!-- <div class="persen">
+          <div class="atas">
+            <div class="label">unity</div>
+            <div class="jumlah">89 %</div>
+          </div>
+          <div class="bar">
+            <div class="bar2 punity"></div>
+          </div>
+        </div> -->
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="kotak">
+    <div class="judul">portofolio</div>
+    <div class="isi">
+        you can see my javascript, godot, unity, vb6 and other by visiting this 
+        
+        
+        
+        <a target="_blank" href="https://vx2f.github.io/web/showcase.html">https://vx2f.github.io/web/showcase.html</a>
+    
+    </div>
+</div>
+<div class="kotak">
+  <div class="judul">experience</div>
+  <div class="isi">
+    <ul>
+        <li>
+mediapro indonesia (juni_2021 -november_2023) (unity,godot,vb6,javascript,touchdesigner)
+
+        </li>
+        <li>
+            ztech (januari_2018 - juni_2018) (aplikasi sidikjari, vb6)
+
+        </li>
+        <li>
+            siska (2011-2012) (software akuntansi, borland delphi)  </div>
+
+        </li>
+    </ul>
+
+</div>
+
+<div class="kotak">
+  <div class="judul">link</div>
+  <table>
+    <tr>
+      <td>whatsapp</td>
+      <td>:</td>
+      <td>0895-2754-0023</td>
+    </tr>
+    <tr>
+      <td>mail</td>
+      <td>:</td>
+      <td>m.anang.mr@gmail.com</td>
+    </tr>
+    <tr>
+      <td>web</td>
+      <td>:</td>
+      <td>https://vx2f.github.io/</td>
+    </tr>
+  </table>
+</div>
+
+<div class="kotak">
+  <div class="judul">education</div>
+  <div class="isi">
+
+    <table>
+        <tr>
+            <td>mi infarul ghoy</td>
+            <td>:</td>
+            <td>1992-1998</td>
+        </tr>
+        <tr>
+            <td>smp 9 semarang</td>
+            <td>:</td>
+            <td>1998-2001</td>
+        </tr>
+        <tr>
+            <td>sma 2 semarang</td>
+            <td>:</td>
+            <td>2001-2004</td>
+        </tr>
+        <tr>
+            <td>stekom</td>
+            <td>:</td>
+            <td>2006-2010</td>
+        </tr>
+    </table>
+  </div>
+</div>
+
+
+<div class="kotak">
+  <div class="judul">about this file</div>
+  <div class="isi">
+    made with native css, can be downloaded in https://vx2f.github.io/nitip/resume/resume.html
+  </div>
+</div>
 
